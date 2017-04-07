@@ -16,17 +16,18 @@ import java.util.*;
  */
 public class Rectangles {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         // TODO code application logic here
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         try {
-            System.out.print("Enter Iteration\n");
+            System.out.print("Enter number of Iterations\n");
             int niteration=Integer.parseInt(br.readLine());
-            while(niteration<=5 & niteration>=1){
+            if(niteration<=5 & niteration>=1) {
+                System.out.print("Iteration should be >=1 and <=5\n");
+                break;
+            }
+            while( niteration > 0 ){
             System.out.print("Enter N M K values\n");
             String line=br.readLine();
             String[] matrixValues=line.split(" ");
